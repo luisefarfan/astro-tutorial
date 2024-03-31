@@ -1,0 +1,25 @@
+---
+import Social from '@components/Social.astro';
+
+const platforms = [
+  { platform: 'github', username: 'luisefarfan' },
+  { platform: 'linkedin', username: 'in/luisefarfan' },
+];
+const platform = 'github';
+const username = 'luisefarfan';
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+<footer>
+  {
+    platforms.map(({ platform, username }) => (
+      <Social platform={platform} username={username} />
+    ))
+  }
+</footer>
